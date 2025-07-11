@@ -4,4 +4,46 @@
 
 body {
   margin: 0;
+  font-family: Karla, sans-serif;
+  background-color: #f5f7fb;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-container {
+  border-bottom: 0.79px solid #dbdef0;
+  width: 400px;
+}
+
+.question {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 1rem;
+  color: #293264;
+}
+
+.answers {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.answer {
+  min-height: 20px;
+  height: auto;
+  border: 0.79px solid #4d5b9e;
+  border-radius: 7.94px;
+  background-color: transparent;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 10.24px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
 }

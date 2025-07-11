@@ -1,9 +1,10 @@
 import "./index.css";
+import QuizPage from "./pages/QuizPage";
 
 function App() {
   return (
     <>
-      <h1>big pussy</h1>
+      <QuizPage />
     </>
   );
 }
