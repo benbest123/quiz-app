@@ -34,14 +34,16 @@ export default function QuizPage() {
   if (!quizData) return <div>Failed to load quiz</div>;
 
   function handleAnswerSelect(questionIndex, selectedAnswer) {
-    setSelectedAnswers((prev) => {
-      if (prev[questionIndex] === selectedAnswer) {
-        const newAnswers = { ...prev };
-        delete newAnswers[questionIndex];
-        return newAnswers;
-      }
-      return { ...prev, [questionIndex]: selectedAnswer };
-    });
+    if (!gameOver) {
+      setSelectedAnswers((prev) => {
+        if (prev[questionIndex] === selectedAnswer) {
+          const newAnswers = { ...prev };
+          delete newAnswers[questionIndex];
+          return newAnswers;
+        }
+        return { ...prev, [questionIndex]: selectedAnswer };
+      });
+    }
   }
 
   function handleCheckAnswers() {
